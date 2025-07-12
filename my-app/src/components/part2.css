@@ -1,0 +1,19 @@
+.button{
+
+position: relative;
+border-radius: 10px;
+border: 15px;
+margin-left: 660px;
+width: 150px;
+}
+
+.button>P{
+color: rgb(34, 88, 238);
+}
+
+.Rent{
+
+    margin-left: 495px;
+    font-size: 28px;
+    color: rgba(0, 0, 0, 0.863);
+}

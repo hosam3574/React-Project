@@ -1,0 +1,58 @@
+body{
+    background-color: whitesmoke;
+}
+
+
+.all{
+
+    margin-left: 90px;
+    margin-top: 180px;
+}
+
+
+
+
+.Easily{
+    color:rgb(34, 88, 238) ;
+
+    margin-left: 190px;
+    margin-top: -50px;
+}
+
+.شحطة{
+   
+
+     position: absolute;
+  left: 0;
+  bottom: 140px;
+  width: 10%;
+  height: auto;
+  margin-left: 160px;
+}
+.headline-container {
+  position: relative;
+  font-size: 20px;
+}
+
+
+/*       ********     ***     */
+
+
+.im2{
+
+margin-left: 20px;
+
+}
+
+.im3 {
+  position: relative;
+ margin-left: 500px;
+ top: -250px;
+ 
+}
+
+.im4{
+    position: absolute;
+    margin-left: 90px;
+top: 860px;    
+}
