@@ -6,7 +6,6 @@ import './part2.css';
 
 
 
-
 export default function Part2(){
 
     return(
@@ -23,9 +22,16 @@ export default function Part2(){
 
 <div>
 
-<button>
+<img className="imgbutton" src="/media/button.png" alt="Logo"/>
 
-</button>
+<br></br>
+<br></br>
+<br></br>
+
+<img className="imghonda" src="/media/Honda.png" alt="Logo"/>
+
+
+
 <p></p>
 
 </div>
