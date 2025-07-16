@@ -27,14 +27,51 @@ export default function Part2(){
 <br></br>
 <br></br>
 <br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+
 
 <img className="imghonda" src="/media/Honda.png" alt="Logo"/>
 
 
 
-<p></p>
+
 
 </div>
+
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+
+<div>
+
+<div>
+<img className="imgtriangle" src="/media/triangle.png" alt="Logo"/>
+</div>
+
+
+
+<button className="button"> <p>WHY CHOOES US</p>
+ </button>
+<br></br>
+<h1 className="Rent2">We offer the best experience <br></br> with our rental deals </h1>
+
+</div>
+
+
+
+
+
+
 
 
 
