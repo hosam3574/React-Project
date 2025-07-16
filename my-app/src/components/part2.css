@@ -41,6 +41,73 @@ top: 90px;
 .Rent2{
 
     margin-left: 660px;
-    font-size: 22px;
-    color: rgba(0, 0, 0, 0.863);
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.753);
+}
+
+
+.chooesus {
+display: flexbox;
+margin-top: -500px;
+margin-left: 210px;
+}
+
+
+
+
+
+
+.imgtrianglee{
+
+
+    width:690px;
+    
+    
+}
+
+
+.Audicar{
+    top: 50px;
+   
+    margin-top: -950px
+}
+
+
+
+/*  النهاية تاعت الصفحة الاوله  */
+
+.finalpage{
+
+    margin-left: 50%;
+}
+
+
+.money{
+    width: 50px;
+   
+}
+
+.buttons{
+    
+    background-color: whitesmoke;
+    border: 5px;
+    border-radius: 10px;
+   
+}
+
+
+.h1par{
+    margin-left: 90px;
+    margin-top: -75px;
+}
+
+
+
+.h1part2{
+    color: rgba(0, 0, 0, 0.719);
+    font-size: 23px;
+}
+
+.p1part2{
+    color: rgba(0, 0, 0, 0.466);
 }
