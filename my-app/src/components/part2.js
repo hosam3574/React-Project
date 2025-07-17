@@ -1,13 +1,21 @@
 import React from "react";
 import './part2.css';
 
-
+import { useNavigate } from 'react-router-dom';
 
 
 
 
 
 export default function Part2(){
+
+
+ const navigate = useNavigate();
+
+  const goToPart3 = () => {
+    navigate('/part3');
+};
+
 
     return(
 
@@ -149,7 +157,9 @@ any time when you have problem. </p>
 
 
 
-
+<div style={{ textAlign: 'center', marginBottom: '50px' }}>
+        <button onClick={goToPart3} className="button">Next</button>
+      </div>
  
  
  
