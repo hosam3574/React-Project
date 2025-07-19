@@ -53,30 +53,126 @@ return(
 
 </div>
     
+<div>
 
 
 <button className="finshall"> 
 
+
+
+<div>
+
+  <ul>
+
+<li>
+
+<img className="coler" src=" /media/Frame 993 (2).png" alt="logo"  /></li>
+
+<li>
+  <div>
+<img className="coler2" src=" /media/Frame 1005.png" alt="logo"  /></div>
+</li>
+
+
+<hr className="hr"/><br></br>
+Copyright 2023 ・ Rentcars, All Rights Reserved <br></br><br></br><br></br><br></br>
+  </ul>
+
+</div>
+
+
+
+
+
+
+
+  <div className="ulli">
+    
+
+
 <ul>
 
-<li>
+<li className="libig">
 Our Product
 </li>
+<br></br>
 
-<li>
-  Career  
-</li>
+<li className="li" >  Career</li>  <br/>
 
-<li>
-   Packages 
-</li>
+<li className="li" >car</li><br/>
+
+<li className="li" >Packages </li><br/>
+    
+<li className="li" >Features</li><br/>
 
 
-<li>Features</li>
+</ul>
+
+
+<div className="div2">
+
+<ul>
+
+<li className="libig">Resources </li>
+
+<br></br>
+
+<li className="li">Download </li><br/>
+<li className="li">Help Centre</li><br/>
+<li className="li"> Guides </li><br/>
+<li className="li"> Partner Network </li><br/>
+<li className="li"> Cruises </li><br/>
+<li className="li"> Developer </li><br/>
 
 
 
 </ul>
+</div>
+
+
+
+<div className="div3">
+<ul>
+
+<li className="libig"> About Rentcars </li>
+
+<br></br>
+
+<li className="li" > Why choose us </li><br/>
+<li className="li" > Our Story </li><br/>
+<li className="li" > Investor Relations </li><br/>
+<li className="li" > Press Center </li><br/>
+<li className="li" > Advertise </li><br/>
+
+
+</ul>
+</div>
+
+
+
+<div>
+
+<ul className="div3">
+  <li className="libig" > Follow Us </li>
+<br></br>
+<img src=" /media/facbook.png " alt="" />
+
+</ul>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
 
 
 
@@ -84,6 +180,25 @@ Our Product
 
 
 </button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

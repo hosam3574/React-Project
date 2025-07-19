@@ -73,8 +73,84 @@ display: flex;
 
 .finshall{
 width: 100%;
+
 border: 6px;
 border-radius: 15px;
-background-color:rgba(27, 27, 78, 0.973) ;
+background-color:rgba(19, 19, 59, 0.973) ;
+margin-top: -133px;
 
+color: white;
+
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.finshall {
+  display: flex;
+  gap: 40px;
+}
+
+
+
+
+.ulli{
+display: flex;
+margin-top: 40px;
+margin-left: 4%;
+
+}
+
+
+
+/* ******************** */
+
+.coler{
+
+    margin-left: 120px;
+width: 130px;
+margin-top: 40px;
+
+
+}
+
+.coler2{
+
+ margin-top:20px;
+margin-left: 190px;
+}
+
+
+
+
+.div2{
+    margin-left: 100px;
+}
+
+
+.div3{
+    margin-left: 100px;
+}
+
+.libig{
+    font-size: 18px;
+}
+
+.li{
+
+color: rgba(240, 248, 255, 0.74);
+
+}
+
+
+
+
+
+.hr{
+    margin-left: 10px;
+    width: 100%;
+    margin-top: 30px;
 }
