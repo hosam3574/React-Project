@@ -22,15 +22,15 @@ export default function Part2(){
 
 <h1 className="Rent">Rent with following 3 working steps</h1>
 <br></br>
-<br></br>
+
 
 <div>
 
 <img className="imgbutton" src="/media/button.png" alt="Logo"/>
 
-<br></br>
-<br></br>
-<br></br>
+
+
+
 <br></br>
 <br></br>
 <br></br>
@@ -124,6 +124,11 @@ directly to you.</p>
 <p className="p1part2" >Have a question? Contact Rentcars support<br></br>
 any time when you have problem. </p>
 </div>
+<br></br><br></br><br></br><br></br><br></br>
+<div>
+
+<img className="imgcars" src="https://careem-public-web-media.imgix.net/2_9d1cf731fa_d85bfbe681.webp"alt=""/>
+</div>
 
 
 
@@ -131,7 +136,7 @@ any time when you have problem. </p>
 
 </div>
 
- 
+
 
 
 </div>
@@ -141,15 +146,67 @@ any time when you have problem. </p>
 
 
 
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
 
 
+
+<div className="استأجر ">
+    <div
+  style={{
+    textAlign: 'center',
+    color: 'blue',
+    marginTop:'5',
+    padding: '20px',
+    borderRadius: '10px',
+    fontSize: '25px',
+    fontWeight: 'bold',
+    
+  }}
+>
+  🚗 استأجر الآن سيارتك
+  <div style={{ fontSize: '28px', marginTop: '10px', animation: 'bounceDown 1.5s infinite' }}>
+    ⬇️⬇️⬇️
+  </div>
+</div>
+
+<style>
+  {`
+    @keyframes bounceDown {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(8px);
+      }
+    }
+  `}
+</style>
+
+
+</div>
+
+
+<div className="flix">
+
+
+
+
+
+
+
+
+<p className="ppps"> Are you looking for a practical car or a luxury vehicle? <br></br> We have everything you need. Choose from top brands <br></br> like Tesla, Mercedes, Land Rover, Renault, BMW, Toyota, and more to suit your journey.</p>
+</div>
+<h1  className="h1">Discover your ideal car</h1>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br><br></br><br></br><br></br><br></br><br></br><br></br>
 
  
  

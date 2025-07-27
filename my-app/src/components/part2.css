@@ -128,7 +128,8 @@ margin-left: 210px;
     animation: pulse 2s infinite;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
- margin-left: 220px;
+ margin-left: 620px;
+ margin-top: 50px;
   }
 
   .feedback-button:hover {
@@ -140,4 +141,49 @@ margin-left: 210px;
     0% { transform: scale(1); }
     50% { transform: scale(1.03); }
     100% { transform: scale(1); }
+  }
+
+
+
+  .imgcars{
+
+margin-right: 160px;
+
+
+  }
+  .flix{
+   
+   margin-top: -350px;
+   margin-left: 50px;
+   
+  }
+
+
+.h1{
+    color: #0e7ff8 ;
+    font-size: 37px;
+   margin-top: -60px;
+   margin-left: 20px;
+   margin-top: -150px;
+}
+
+  .ppps{
+margin-top: -150px;
+  }
+
+
+
+
+
+  .استأجر{
+margin-top: 90px;
+
+  }
+
+
+
+
+
+  .but1{
+    margin-left: 26px;
   }
