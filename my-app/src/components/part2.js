@@ -1,7 +1,7 @@
 import React from "react";
 import './part2.css';
 
-
+import { Link } from 'react-router-dom';
 
 
 
@@ -135,7 +135,6 @@ any time when you have problem. </p>
 
 
 </div>
-
 
 
 

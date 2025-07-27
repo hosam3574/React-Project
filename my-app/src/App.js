@@ -10,7 +10,7 @@ import Part3 from'./components/part3';
 import Part4 from './components/part4';
 import Part5 from './components/part5';
 
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
 

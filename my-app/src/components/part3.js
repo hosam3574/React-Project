@@ -48,7 +48,19 @@ return(
 <p className="p1p1"> $ 1,800/day</p>
 
 <button className="disgin">
-    <h1 className="rentnow">Rent Now</h1> 
+<h1 className="rentnow">
+  <a
+    href="https://palmrentcar.com/ar/cars-filter?city=1&from_date=2025-07-28&time_from=10_00&to_date=2025-08-02&time_to=10_00"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      textDecoration: 'none',
+      color: 'white', 
+    }}
+  >
+    Rent Now
+  </a>
+</h1>
 
     </button>
 
@@ -130,7 +142,19 @@ return(
 <p className="p1p1"> $ 2,200/day</p>
 
 <button className="disgin">
-    <h1 className="rentnow">Rent Now</h1> 
+<h1 className="rentnow">
+  <a
+    href="https://palmrentcar.com/ar/cars-filter?city=1&from_date=2025-07-28&time_from=10_00&to_date=2025-08-02&time_to=10_00"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      textDecoration: 'none',
+      color: 'white', 
+    }}
+  >
+    Rent Now
+  </a>
+</h1>
 
     </button>
 
@@ -174,7 +198,20 @@ return(
 <p className="p1p1"> $ 1,300/day</p>
 
 <button className="disgin">
-    <h1 className="rentnow">Rent Now</h1> 
+<h1 className="rentnow">
+  <a
+    href="https://palmrentcar.com/ar/cars-filter?city=1&from_date=2025-07-28&time_from=10_00&to_date=2025-08-02&time_to=10_00"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      textDecoration: 'none',
+      color: 'white', 
+    }}
+  >
+    Rent Now
+  </a>
+</h1>
+
 
     </button>
 
@@ -218,14 +255,30 @@ return(
 <p className="p1p1"> $ 3,800/day</p>
 
 <button className="disgin">
-    <h1 className="rentnow">Rent Now</h1> 
+<h1 className="rentnow">
+  <a
+    href="https://palmrentcar.com/ar/cars-filter?city=1&from_date=2025-07-28&time_from=10_00&to_date=2025-08-02&time_to=10_00"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      textDecoration: 'none',
+      color: 'white', 
+    }}
+  >
+    Rent Now
+  </a>
+</h1>
+
 
     </button>
 
 </button>
 
+<br></br><br></br>
 
-
+<button className="feedback-button">
+  📢 ضع رأيك عزيزي الزبون
+</button>
 
 </div>
 
