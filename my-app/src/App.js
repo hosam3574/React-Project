@@ -20,15 +20,20 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
 
-<div>
+  <BrowserRouter>
       <Navbar />
-   
-        <Part1 />
+      <Routes>
+          <Route path='/part2' element={<Part1/>}/>
+          <Route path='/part2' element={<Part2/>}/>
+          <Route path='/part3' element={<Part3/>}/>
+
+      </Routes>
+        {/* <Part1 />
        <Part2 />
-        <Part3 />
+        <Part3 /> */}
       <Part4/>
     <Part5/>
-</div>
+    </BrowserRouter>
 
 
 
