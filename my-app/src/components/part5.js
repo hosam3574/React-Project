@@ -155,8 +155,8 @@ Our Product
 <ul className="div3">
   <li className="libig" > Follow Us </li>
 <br></br>
-<img src=" /media/facbook.png " alt="" />
-
+ <a href="https://www.facebook.com/groups/538920657585875/"> <img src=" /media/facbook.png " alt="" />
+   </a>
 </ul>
 
 
