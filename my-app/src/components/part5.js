@@ -32,10 +32,9 @@ return(
 
 
  <div className="icons">
+  <a href="https://play.google.com/store/apps/details?id=com.rentalcars.online&hl=ar"><img className="im1" src="/media/image 2.png" alt="Logo"/></a>
 
-<img className="im1" src="/media/image 2.png" alt="Logo"/>
-<img className="im2" src="/media/image 3.png" alt="Logo"/>
-
+<a href="https://apps.apple.com/us/app/%D8%AA%D8%A3%D8%AC%D9%8A%D8%B1-%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA-%D8%AA%D8%A7%D8%AC%D9%8A%D8%B1-%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA/id1613929322?l=ar"><img className="im2" src="/media/image 3.png" alt="Logo"/></a>
 
 
  </div>
