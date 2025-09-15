@@ -1,10 +1,18 @@
 
-import React from "react";
+
+import React, { useState } from "react";
 
 import './part1.css';
 
-export default function Part1(){
 
+
+
+export default function Part1(){
+ const [showPickup, setShowPickup] = useState(false);
+  const [pickupDate, setPickupDate] = useState("");
+
+   const [showReturn, setShowReturn] = useState(false);
+  const [returnDate, setReturnDate] = useState("");
 
 return(
 
@@ -35,16 +43,140 @@ return(
  
 
 </div>
-
-
 <img className="im3" src="/media/car 2 1.png" alt="Logo"/>
 
-<div > 
 
-<img  className="im4" src="/media/form.png" alt="Logo"/>
+  <div
+        style={{
+          backgroundColor: "#f0f4ff",
+          padding: "20px",
+          borderRadius: "12px",
+          boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+          margin: "20px 0",
+          lineHeight: "1.6",
+          color: "#333",
+          textAlign: "center",
+          marginTop: "-240px"
+
+        }}
+      >
+        <h2 style={{ marginBottom: "12px", fontSize: "22px", color: "#1a1a1a" }}>
+          🚗 Car Rental Steps
+        </h2>
+        <p style={{ fontSize: "16px" }}>
+          Before completing your booking, please carefully select the pickup location
+          and choose the pickup and return dates that suit you best. This information
+          helps our team prepare the car at the right time and place, ensuring a
+          smooth, convenient, and safe rental experience, with all necessary details
+          provided to facilitate the pickup and return process without any delays.
+        </p>
+      </div>
+
+<br></br><br></br>
+<div className="allimg">
+<button className="allimg">
+<div className="locaation">
+
+<a href="https://www.google.com/maps/place/Dubai+International+Airport+(DXB)/@25.253174,55.365672,17z"><img className="locatio" src="/media/location.png" alt="Logo"/></a>
+
+
+ 
 
 
 </div>
+
+  <div className="locaation">
+      {/* الصورة */}
+      <img
+        className="locatio"
+        src="/media/Pickup date.png"
+        alt="Pickup Date"
+        style={{ cursor: "pointer" }}
+        onClick={() => setShowPickup(!showPickup)} // toggle عند الضغط
+      />
+
+      {/* حقل التاريخ يظهر فقط عند الضغط */}
+      {showPickup && (
+        <input
+          type="date"
+          value={pickupDate}
+          onChange={(e) => setPickupDate(e.target.value)}
+          style={{
+            display: "block",
+            marginTop: "10px",
+            padding: "5px 10px",
+            borderRadius: "5px",
+            border: "1px solid #ccc"
+          }}
+        />
+      )}
+    </div>
+
+
+<div className="locaation">
+      {/* صورة Return Date */}
+      <img
+        className="locatio"
+        src="/media/Frame 14.png"
+        alt="Return Date"
+        style={{ cursor: "pointer" }}
+        onClick={() => setShowReturn(!showReturn)} // عند الضغط يظهر/يختفي حقل التاريخ
+      />
+
+      {/* حقل التاريخ يظهر فقط عند الضغط */}
+      {showReturn && (
+        <input
+          type="date"
+          value={returnDate}
+          onChange={(e) => setReturnDate(e.target.value)}
+          style={{
+            display: "block",
+            marginTop: "10px",
+            padding: "5px 10px",
+            borderRadius: "5px",
+            border: "1px solid #ccc"
+          }}
+        />
+      )}
+    </div>
+
+
+
+
+<div className="search">
+  <button style={{ backgroundColor:"blue",
+    border:"2px",
+ borderRadius: "5px",
+ width:"100px",
+ height:"35px"
+ 
+  }}>
+   <form>
+    <search style={{color:"white",
+    fontSize:"20px"
+     
+    }}>  Search </search>
+   </form>
+  </button>
+</div>
+
+
+</button>
+</div>
+
+
+
+
+
+<br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+
+
+
+
+
+
+
+
 
 
 
