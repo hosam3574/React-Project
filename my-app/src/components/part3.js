@@ -1,204 +1,83 @@
-import React from "react";
+import React, { useState } from "react";
 import "./css/part3.css";
 import CarCard from "./carCard";
 
 export default function Part3() {
+  const [showSUV, setShowSUV] = useState(false);
+
   return (
     <div>
       <div className="hgit">
         <button className="button">
           <p>POPULAR RENTAL</p>
         </button>
-        <h1>Most popular cars rental deals</h1>
+        <h1 style={{
+          marginLeft:"35%"
+        }}>Most popular cars rental deals</h1>
       </div>
 
-      <br />
-      <br />
-      <br />
-
-      {/* كل السيارات */}
       <div className="allcars">
-        <CarCard
-          name="Jaguar XE L P250"
-          image="/media/jaguar car.png"
-          price={800}
-        />
+        {/* أول 4 سيارات أصغر */}
+        <CarCard className="small-car" name="Jaguar XE L P250" image="/media/jaguar car.png" price={800} reviews="4.8 (2,436 reviews)" />
+        <CarCard className="small-car" name="Audi R8" image="/media/Audi 1 (2).png" price={700} reviews="4.7 (2,120 reviews)" />
+        <CarCard className="small-car" name="BMW M3" image="/media/bmw m3.png" price={900} reviews="4.9 (3,100 reviews)" />
+        <CarCard className="small-car" name="Lamborghini Huracan" image="/media/lamborgene car.png" price={1000} reviews="4.8 (1,950 reviews)" />
 
-        <CarCard
-          name="Audi R8"
-          image="/media/Audi 1 (2).png"
-          price={700}
-        />
-
-        <CarCard
-          name="BMW M3"
-          image="/media/bmw m3.png"
-          price={900}
-        />
-
-        <CarCard
-          name="Lamborghini Huracan"
-          image="/media/lamborgene car.png"
-          price={1000}
-        />
+        {/* السيارات بالحجم العادي */}
+        <CarCard name="New GLC – 2023" image="/media/car19-660x440.jpg.png" price={1200} reviews="4.6 (2,000 reviews)" />
+        <CarCard name="Ford Explorer 2023" image="/media/Container (1).png" price={950} reviews="4.7 (1,850 reviews)" />
+        <CarCard name="Audi A6 3.5 – New" image="/media/car12-660x440.jpg.png" price={850} reviews="4.8 (2,400 reviews)" />
+        <CarCard name="T-Cross – 2023" image="/media/Container.png" price={780} reviews="4.6 (1,950 reviews)" />
       </div>
 
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+ <div
+  style={{
+    textAlign: 'center',
+    color: 'blue',
+    marginTop:'5',
+    padding: '20px',
+    borderRadius: '10px',
+    fontSize: '25px',
+    fontWeight: 'bold',
+    
+  }}
+>
+  
+  <div style={{ fontSize: '28px', marginTop: '10px', animation: 'bounceDown 1.5s infinite' }}>
+    ⬇️⬇️⬇️
+  </div>
+</div>
 
-      {/* قسم شراء السيارات */}
-      <div
-        style={{
-          textAlign: "center",
-          color: "blue",
-          marginTop: "5",
-          padding: "20px",
-          borderRadius: "10px",
-          fontSize: "25px",
-          fontWeight: "bold",
+
+
+      {/* زر إظهار السيارات العالية */}
+      <div style={{ textAlign: "center", margin: "30px 0" ,}}>
+        <button style={{fontSize:"30px",
+          backgroundColor:" darkblue",
+          border:"5px",
+          borderRadius:"15px",
+          color:"whitesmoke"
         }}
-      >
-        🚗 قم بشراء سيارة احلامك من معرضنا
-        <div
-          style={{
-            fontSize: "28px",
-            marginTop: "10px",
-            animation: "bounceDown 1.5s infinite",
-          }}
+          className="show-suv-btn"
+          onClick={() => setShowSUV(!showSUV)}
         >
-          ⬇️⬇️⬇️
-        </div>
+          {showSUV ? "High-visibility car cover" : "Click if you want high 6 seater cars"}
+        </button>
       </div>
 
-      <style>
-        {`
-          @keyframes bounceDown {
-            0%, 100% {
-              transform: translateY(0);
-            }
-            50% {
-              transform: translateY(8px);
-            }
-          }
-        `}
-      </style>
-
-      {/* سيارات للبيع */}
-      <button className="but1">
-        <img className="jaguarcar" src="/media/Container.png" alt="Logo" />
-        <p className="namecar">T-Cross – 2023</p>
-        <h1>
-          <img className="star" src="/media/Star 1.png" alt="Logo" />{" "}
-          <h1 className="h1h1">4.8 (2.436 reviews)</h1>
-        </h1>
-        <img src="/media/caption car.png" alt="Logo" />
-        <hr />
-        <h1 className="price">price </h1>
-        <p className="p1p1"> $ 33,800</p>
-        <button className="disgin">
-          <h1 className="rentnow">
-            <a
-              href="https://palmrentcar.com/ar/cars-filter?city=1&from_date=2025-07-28&time_from=10_00&to_date=2025-08-02&time_to=10_00"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              Buy Now
-            </a>
-          </h1>
-        </button>
-      </button>
-
-      <button className="but1">
-        <img
-          className="jaguarcar"
-          src="/media/car12-660x440.jpg.png"
-          alt="Logo"
-        />
-        <p className="namecar">Audi A6 3.5 – New</p>
-        <h1>
-          <img className="star" src="/media/Star 1.png" alt="Logo" />{" "}
-          <h1 className="h1h1">4.8 (2.436 reviews)</h1>
-        </h1>
-        <img src="/media/caption car.png" alt="Logo" />
-        <hr />
-        <h1 className="price">price </h1>
-        <p className="p1p1"> $ 23,800</p>
-        <button className="disgin">
-          <h1 className="rentnow">
-            <a
-              href="https://palmrentcar.com/ar/cars-filter?city=1&from_date=2025-07-28&time_from=10_00&to_date=2025-08-02&time_to=10_00"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              Buy Now
-            </a>
-          </h1>
-        </button>
-      </button>
-
-      <button className="but1">
-        <img
-          className="jaguarcar"
-          src="/media/car19-660x440.jpg.png"
-          alt="Logo"
-        />
-        <p className="namecar">New GLC – 2023</p>
-        <h1>
-          <img className="star" src="/media/Star 1.png" alt="Logo" />{" "}
-          <h1 className="h1h1">4.8 (2.436 reviews)</h1>
-        </h1>
-        <img src="/media/caption car.png" alt="Logo" />
-        <hr />
-        <h1 className="price">price </h1>
-        <p className="p1p1"> $ 13,800</p>
-        <button className="disgin">
-          <h1 className="rentnow">
-            <a
-              href="https://palmrentcar.com/ar/cars-filter?city=1&from_date=2025-07-28&time_from=10_00&to_date=2025-08-02&time_to=10_00"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              Buy Now
-            </a>
-          </h1>
-        </button>
-      </button>
-
-      <button className="but1">
-        <img
-          className="jaguarcar"
-          src="/media/Container (1).png"
-          alt="Logo"
-        />
-        <p className="namecar">Ford Explorer 2023</p>
-        <h1>
-          <img className="star" src="/media/Star 1.png" alt="Logo" />{" "}
-          <h1 className="h1h1">4.8 (2.436 reviews)</h1>
-        </h1>
-        <img src="/media/caption car.png" alt="Logo" />
-        <hr />
-        <h1 className="price">price </h1>
-        <p className="p1p1"> $ 53,800</p>
-        <button className="disgin">
-          <h1 className="rentnow">
-            <a
-              href="https://palmrentcar.com/ar/cars-filter?city=1&from_date=2025-07-28&time_from=10_00&to_date=2025-08-02&time_to=10_00"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              Buy Now
-            </a>
-          </h1>
-        </button>
-      </button>
+      {showSUV && (
+        <div className="allcars">
+          {/* 8 سيارات SUV */}
+          <CarCard name="Toyota Land Cruiser 2024" image="/media/white-suv-on-transparent-background-3d-rendering-illustration-free-png.webp" price={1500} reviews="4.9 (1,200 reviews)" />
+          <CarCard name="Jeep Grand Cherokee 2023" image="/media/jeepgrand.png.avif" price={1300} reviews="4.8 (1,100 reviews)" />
+          <CarCard name="Ford Expedition 2023" image="/media/2025-ford-expedition-tremor-3.jpg" price={1400} reviews="4.7 (1,050 reviews)" />
+          <CarCard name="Chevrolet Tahoe 2023" image="/media/Tahoe2025-HighCountry-DarkAshMetallic-640w.webp" price={1350} reviews="4.8 (980 reviews)" />
+          <CarCard name="Nissan Patrol 2024" image="/media/nissan-patril-astar.webp" price={1450} reviews="4.9 (1,100 reviews)" />
+          <CarCard name="Land Rover Discovery 2023" image="/media/2023_land-rover_discovery_4dr-suv_p300-r-dynamic-s_fq_oem_1_1600.avif" price={1380} reviews="4.8 (1,020 reviews)" />
+          <CarCard name="Mercedes GLS 2024" image="/media/2024_Mercedes_Benz_GLS_A_O.jpg" price={1550} reviews="4.9 (1,150 reviews)" />
+          <CarCard name="BMW X7 2023" image="/media/images.jpeg" price={1500} reviews="4.8 (1,080 reviews)" />
+        </div>
+      )}
     </div>
   );
 }

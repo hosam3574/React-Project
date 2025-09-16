@@ -85,80 +85,91 @@ return(
 
 </div>
 
-  <div className="locaation">
-      {/* الصورة */}
-      <img
-        className="locatio"
-        src="/media/Pickup date.png"
-        alt="Pickup Date"
-        style={{ cursor: "pointer" }}
-        onClick={() => setShowPickup(!showPickup)} // toggle عند الضغط
-      />
+ <div className="locaation">
+  {/* الصورة */}
+  <img
+    className="locatio"
+    src="/media/Pickup date.png"
+    alt="Pickup Date"
+    style={{ cursor: "pointer" }}
+    onClick={() => setShowPickup(!showPickup)} // toggle عند الضغط
+  />
 
-      {/* حقل التاريخ يظهر فقط عند الضغط */}
-      {showPickup && (
-        <input
-          type="date"
-          value={pickupDate}
-          onChange={(e) => setPickupDate(e.target.value)}
-          style={{
-            display: "block",
-            marginTop: "10px",
-            padding: "5px 10px",
-            borderRadius: "5px",
-            border: "1px solid #ccc"
-          }}
-        />
-      )}
-    </div>
-
+  {/* حقل التاريخ يظهر فقط عند الضغط */}
+  {showPickup && (
+    <input
+      type="date"
+      value={pickupDate}
+      onChange={(e) => setPickupDate(e.target.value)}
+      style={{
+        display: "block",
+        marginTop: "10px",
+        padding: "5px 10px",
+        borderRadius: "5px",
+        border: "1px solid #ccc"
+      }}
+    />
+  )}
+</div>
 
 <div className="locaation">
-      {/* صورة Return Date */}
-      <img
-        className="locatio"
-        src="/media/Frame 14.png"
-        alt="Return Date"
-        style={{ cursor: "pointer" }}
-        onClick={() => setShowReturn(!showReturn)} // عند الضغط يظهر/يختفي حقل التاريخ
-      />
+  {/* صورة Return Date */}
+  <img
+    className="locatio"
+    src="/media/Frame 14.png"
+    alt="Return Date"
+    style={{ cursor: "pointer" }}
+    onClick={() => setShowReturn(!showReturn)} // عند الضغط يظهر/يختفي حقل التاريخ
+  />
 
-      {/* حقل التاريخ يظهر فقط عند الضغط */}
-      {showReturn && (
-        <input
-          type="date"
-          value={returnDate}
-          onChange={(e) => setReturnDate(e.target.value)}
-          style={{
-            display: "block",
-            marginTop: "10px",
-            padding: "5px 10px",
-            borderRadius: "5px",
-            border: "1px solid #ccc"
-          }}
-        />
-      )}
-    </div>
-
-
-
+  {/* حقل التاريخ يظهر فقط عند الضغط */}
+  {showReturn && (
+    <input
+      type="date"
+      value={returnDate}
+      onChange={(e) => setReturnDate(e.target.value)}
+      style={{
+        display: "block",
+        marginTop: "10px",
+        padding: "5px 10px",
+        borderRadius: "5px",
+        border: "1px solid #ccc"
+      }}
+    />
+  )}
+</div>
 
 <div className="search">
-  <button style={{ backgroundColor:"blue",
-    border:"2px",
- borderRadius: "5px",
- width:"100px",
- height:"35px"
- 
-  }}>
-   <form>
-    <search style={{color:"white",
-    fontSize:"20px"
-     
-    }}>  Search </search>
-   </form>
+  <button
+    style={{
+      backgroundColor: "blue",
+      border: "none",
+      borderRadius: "5px",
+      width: "100px",
+      height: "35px",
+      color: "white",
+      fontSize: "18px",
+      cursor: "pointer"
+    }}
+    onClick={() => {
+      // هنا يزم بتحفظ أو تبعت المعلومات
+      const data = {
+        pickupDate,
+        returnDate
+      };
+      console.log("تم الإرسال ✅:", data);
+
+      // مثال: تخزين محلي
+      localStorage.setItem("searchData", JSON.stringify(data));
+
+      // رسالة للمستخدم
+      alert("تم إرسال البيانات:\nPickup: " + pickupDate + "\nReturn: " + returnDate);
+    }}
+  >
+    Send
   </button>
 </div>
+
 
 
 </button>
