@@ -7,6 +7,9 @@ import Part4 from "./components/part4";
 import Part5 from "./components/part5";
 import Login from "./components/login";
 
+
+
+
 function App() {
   const [user, setUser] = useState(null);
 
@@ -42,6 +45,7 @@ function App() {
           borderRadius: "6px",
           cursor: "pointer",
           zIndex: 1000,
+          marginTop:"70px",
         }}
       >
         Logout

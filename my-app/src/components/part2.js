@@ -164,9 +164,10 @@ any time when you have problem. </p>
     
   }}
 >
-  🚗 استأجر الآن سيارتك
+  🚗 Rent your car now
   <div style={{ fontSize: '28px', marginTop: '10px', animation: 'bounceDown 1.5s infinite' }}>
-    ⬇️⬇️⬇️
+    <br></br>
+    
   </div>
 </div>
 
@@ -191,8 +192,8 @@ any time when you have problem. </p>
 
 
 
-
-
+<br></br>
+<br></br><br></br><br></br>
 
 
 
@@ -208,7 +209,7 @@ any time when you have problem. </p>
 <br></br>
 <br></br>
 <br></br>
-<br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+<br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
 
  
  
