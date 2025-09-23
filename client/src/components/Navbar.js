@@ -1,16 +1,11 @@
 import React, { useState } from "react";
 
-export default function Navbar() {
+export default function Navbar({ onLogout }) {
   const [showOptions, setShowOptions] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
 
-  const toggleOptions = () => {
-    setShowOptions(!showOptions);
-  };
-
-  const toggleInfo = () => {
-    setShowInfo(!showInfo);
-  };
+  const toggleOptions = () => setShowOptions(!showOptions);
+  const toggleInfo = () => setShowInfo(!showInfo);
 
   return (
     <>
@@ -50,14 +45,13 @@ export default function Navbar() {
 
           {/* Contact us with arrows above */}
           <li style={{ position: "relative", textAlign: "center" }}>
-            {/* الأسهم ما تخلي الزر ينزل */}
             <div
               style={{
                 display: "flex",
                 justifyContent: "center",
                 gap: "6px",
                 position: "absolute",
-                top: "-22px", // يرفع الأسهم فوق الزر
+                top: "-22px",
                 left: "50%",
                 transform: "translateX(-50%)",
               }}
@@ -80,6 +74,13 @@ export default function Navbar() {
                 </a>
               </div>
             )}
+          </li>
+
+          {/* 🔴 زر Logout */}
+          <li>
+            <button style={styles.logoutButton} onClick={onLogout}>
+              Logout
+            </button>
           </li>
         </ul>
       </nav>
@@ -116,12 +117,11 @@ export default function Navbar() {
             <strong>Email:</strong> hossamtradat@gmail.com
           </p>
           <p>
-            <strong>مشروعي:</strong>
-            بسم الله الرحمن الرحيم، بنسبة لمشروعي مهندس حاولت قد ما اقدر
-            اطبق يلي اخذناه خلال دورتنا، المشروع عبارة عن معرض بسيط شرحت عن
-            وعن الخدمات يلي بقدمها المعرض، وشرحت كيف تستأجر سيارة او اذا حاب
-            تمتلك سيارة أحلامك فقط عليك أن تزور المعرض أو تقوم باستئجار
-            السيارة قبل أن توصل مطار دبي عن بعد. ... وشكرا.
+            <strong>مشروعي:</strong> بسم الله الرحمن الرحيم، بنسبة لمشروعي
+            مهندس حاولت قد ما اقدر اطبق يلي اخذناه خلال دورتنا، المشروع عبارة
+            عن معرض بسيط شرحت عن وعن الخدمات يلي بقدمها المعرض، وشرحت كيف
+            تستأجر سيارة او اذا حاب تمتلك سيارة أحلامك فقط عليك أن تزور المعرض
+            أو تقوم باستئجار السيارة قبل أن توصل مطار دبي عن بعد. ... وشكرا.
           </p>
         </div>
       )}
@@ -199,5 +199,14 @@ const styles = {
   arrow: {
     fontSize: "18px",
     animation: "bounce 1s infinite",
+  },
+  logoutButton: {
+    padding: "6px 12px",
+    backgroundColor: "red",
+    border: "none",
+    borderRadius: "5px",
+    color: "white",
+    cursor: "pointer",
+    fontWeight: "bold",
   },
 };

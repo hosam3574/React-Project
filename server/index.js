@@ -5,27 +5,47 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 const app = express();
-app.use(express.json());
-app.use(cors({ origin: "http://localhost:3000" })); // السماح لواجهة React
+app.use(express.json({ limit: "10mb" }));
+app.use(cors({ origin: "http://localhost:3000" }));
 
-// 🔗 MongoDB Atlas
+// MongoDB
 const MONGO_URL = "mongodb+srv://tradat:1235789@cluster0.gkttyjp.mongodb.net/RentCar";
-
 mongoose.connect(MONGO_URL)
   .then(() => console.log("✅ MongoDB Connected..."))
   .catch(err => console.error("❌ MongoDB Error:", err));
 
-// 🔑 JWT Secret
+// JWT
 const JWT_SECRET = "supersecretkey";
 
-// 🗂️ User model
+// User model
 const UserSchema = new mongoose.Schema({
   email: { type: String, unique: true },
   password: String,
 });
 const User = mongoose.model("User", UserSchema);
 
-// ✨ Register route
+// Booking model
+const BookingSchema = new mongoose.Schema({
+  pickupDate: String,
+  returnDate: String,
+  createdAt: { type: Date, default: Date.now },
+});
+const Booking = mongoose.model("Booking", BookingSchema);
+
+// Rental model
+const RentalSchema = new mongoose.Schema({
+  name: String,
+  price: Number,
+  days: Number,
+  total: Number,
+  driverAge: Number,
+  phone: String,
+  passport: String,
+  createdAt: { type: Date, default: Date.now },
+});
+const Rental = mongoose.model("Rental", RentalSchema);
+
+// Register route
 app.post("/register", async (req, res) => {
   const { email, password } = req.body;
   if (!email || !password) return res.status(400).json({ error: "Email and password required" });
@@ -40,7 +60,7 @@ app.post("/register", async (req, res) => {
   }
 });
 
-// 🔹 Login route
+// Login route
 app.post("/login", async (req, res) => {
   const { email, password } = req.body;
   if (!email || !password) return res.status(400).json({ error: "Email and password required" });
@@ -66,6 +86,40 @@ app.post("/login", async (req, res) => {
   });
 });
 
-// 🔹 Start server
+// Booking route (تاريخ الاستلام والتسليم فقط)
+app.post("/api/book", async (req, res) => {
+  const { pickupDate, returnDate } = req.body;
+  if (!pickupDate || !returnDate) return res.status(400).json({ error: "Please provide pickup and return dates" });
+
+  try {
+    const booking = new Booking({ pickupDate, returnDate });
+    await booking.save();
+
+    console.log("✅ Booking received:", booking);
+    res.json({ message: "تم استقبال بيانات الحجز بنجاح!" });
+  } catch (err) {
+    console.error("❌ Booking error:", err);
+    res.status(500).json({ error: "حدث خطأ أثناء حفظ الحجز" });
+  }
+});
+
+// Rental route (بيانات استئجار السيارة فقط)
+app.post("/api/rent-car", async (req, res) => {
+  const { name, price, days, total, driverAge, phone, passport } = req.body;
+  if (!name || !price || !days || !total || !driverAge) return res.status(400).json({ error: "Missing required fields" });
+
+  try {
+    const rental = new Rental({ name, price, days, total, driverAge, phone, passport });
+    await rental.save();
+
+    console.log("✅ Rental saved:", rental);
+    res.json({ message: "تم استقبال بيانات استئجار السيارة بنجاح!" });
+  } catch (err) {
+    console.error("❌ Rental error:", err);
+    res.status(500).json({ error: "حدث خطأ أثناء حفظ بيانات الاستئجار" });
+  }
+});
+
+// Start server
 const PORT = 5000;
 app.listen(PORT, () => console.log(`🚀 Backend running on http://localhost:${PORT}`));

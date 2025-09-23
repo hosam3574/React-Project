@@ -31,25 +31,9 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <button
-        onClick={handleLogout}
-        style={{
-          position: "fixed",
-          top: 10,
-          right: 10,
-          padding: "8px 12px",
-          backgroundColor: "red",
-          color: "white",
-          border: "none",
-          borderRadius: "6px",
-          cursor: "pointer",
-          zIndex: 1000,
-          marginTop:"70px",
-        }}
-      >
-        Logout
-      </button>
+      <Navbar  onLogout={handleLogout} />
+
+      
       <Part1 />
       <Part2 />
       <Part3 />
