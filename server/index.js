@@ -96,10 +96,10 @@ app.post("/api/book", async (req, res) => {
     await booking.save();
 
     console.log("✅ Booking received:", booking);
-    res.json({ message: "تم استقبال بيانات الحجز بنجاح!" });
+    res.json({ message: "    Booking data received successfully !" });
   } catch (err) {
     console.error("❌ Booking error:", err);
-    res.status(500).json({ error: "حدث خطأ أثناء حفظ الحجز" });
+    res.status(500).json({ error: "An error occurred while saving the booking. " });
   }
 });
 
@@ -113,7 +113,7 @@ app.post("/api/rent-car", async (req, res) => {
     await rental.save();
 
     console.log("✅ Rental saved:", rental);
-    res.json({ message: "تم استقبال بيانات استئجار السيارة بنجاح!" });
+    res.json({ message: "Car rental data received successfully !" });
   } catch (err) {
     console.error("❌ Rental error:", err);
     res.status(500).json({ error: "حدث خطأ أثناء حفظ بيانات الاستئجار" });

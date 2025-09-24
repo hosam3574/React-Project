@@ -6,10 +6,18 @@ export default function Part1(){
   const [pickupDate, setPickupDate] = useState("");
   const [showReturn, setShowReturn] = useState(false);
   const [returnDate, setReturnDate] = useState("");
+  const [notification, setNotification] = useState(null);
+
+  // اليوم الحالي بصيغة YYYY-MM-DD
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  const mm = String(today.getMonth() + 1).padStart(2, "0");
+  const dd = String(today.getDate()).padStart(2, "0");
+  const minDate = `${yyyy}-${mm}-${dd}`;
 
   const handleSend = async () => {
     if (!pickupDate || !returnDate) {
-      alert("يرجى تحديد تاريخ الاستلام والتسليم");
+      setNotification({ type: "error", message: "Please select the pickup and return dates." });
       return;
     }
 
@@ -24,20 +32,20 @@ export default function Part1(){
 
       if (res.ok) {
         console.log("✅ Booking sent:", { pickupDate, returnDate });
-        alert(data.message);
+        setNotification({ type: "success", message: data.message });
       } else {
         console.error("❌ Booking error:", data.error);
-        alert("فشل إرسال البيانات: " + data.error);
+        setNotification({ type: "error", message: "Failed to send data.: " + data.error });
       }
     } catch (err) {
       console.error("❌ Network error:", err);
-      alert("حدث خطأ أثناء إرسال البيانات");
+      setNotification({ type: "error", message: "   An error occurred while sending the data." });
     }
   };
 
   return (
     <div className="all">
-      {/* كل محتوى Part1 يبقى كما هو */}
+      {/* المحتوى الأصلي Part1 يبقى كما هو */}
       <div className="headline-container">
         <h1> Find, book and <br/> rent a car <span className="easily-container">
           <p className="Easily">Easily </p>
@@ -72,7 +80,6 @@ export default function Part1(){
         <h2 style={{ marginBottom: "12px", fontSize: "22px", color: "#1a1a1a" }}>
           🚗 Car Rental Steps
         </h2>
-       
         <p style={{ fontSize: "18px" }}> 
           Before completing your booking, please carefully select the pickup location
           and choose the pickup and return dates that suit you best.
@@ -102,6 +109,7 @@ export default function Part1(){
                 value={pickupDate}
                 onChange={(e) => setPickupDate(e.target.value)}
                 style={{ display: "block", marginTop: "10px", padding: "5px 10px", borderRadius: "5px", border: "1px solid #ccc" }}
+                min={minDate}
               />
             )}
           </div>
@@ -120,6 +128,7 @@ export default function Part1(){
                 value={returnDate}
                 onChange={(e) => setReturnDate(e.target.value)}
                 style={{ display: "block", marginTop: "10px", padding: "5px 10px", borderRadius: "5px", border: "1px solid #ccc" }}
+                min={pickupDate || minDate}
               />
             )}
           </div>
@@ -143,6 +152,30 @@ export default function Part1(){
           </div>
         </button>
       </div>
+
+      {notification && (
+  <div
+    style={{
+      position: "fixed",
+      top: "20px",
+      right: "20px",
+      padding: "15px 25px",
+      borderRadius: "8px",
+      backgroundColor: notification.type === "success" ? "#4CAF50" : "#f44336",
+      color: "#fff",
+      fontWeight: "bold",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
+      zIndex: 9999,
+    }}
+  >
+    {notification.message}
+  </div>
+)}
+
+{/* هاي بتخليه يروح بعد ثانيتين */}
+{notification && setTimeout(() => setNotification(null), 2000)}
+
+
       <br/><br/><br/><br/><br/><br/><br/><br/>
     </div>
   );
