@@ -99,7 +99,7 @@ export default function Navbar({ onLogout }) {
             <strong>My Name:</strong> Hosam Mouyyad Ahmad Tradat
           </p>
           <p>
-            <strong>2nd year:</strong> Software Engineering Student
+            <strong>3nd year:</strong> Software Engineering Student
           </p>
           <p>
             <strong>Phone:</strong> +916 770245471
@@ -111,7 +111,7 @@ export default function Navbar({ onLogout }) {
             <strong>Student at:</strong> SDK
           </p>
           <p>
-            <strong>Course:</strong> Front-end
+            <strong>Course:</strong> Front-end and Back-end
           </p>
           <p>
             <strong>Email:</strong> hossamtradat@gmail.com
